@@ -1,4 +1,8 @@
 <template>
+  <font-awesome-icon :icon="['fas', 'phone']" />
+
+  <font-awesome-icon icon="phone" />
+
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
