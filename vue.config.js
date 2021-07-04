@@ -2,5 +2,5 @@ module.exports = {
     devServer: {
         host: 'localhost'
     },
-    publicPath: '/cold-lemonade/'
+    publicPath: process.env.NODE_ENV === 'production' ? '/wip-limonade/' : '/'
 }
