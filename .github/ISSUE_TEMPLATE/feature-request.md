@@ -7,7 +7,8 @@ assignees: AlexisMelo
 
 ---
 
-[Description ...]
+[comment]: <> (Description à écrire juste ici à la place des " ... ")
+...
 
 # Avancement 
 
@@ -17,7 +18,8 @@ assignees: AlexisMelo
 
 # Contenu
 
-...
+- ...
+- ...
 
 # Liens
 
