@@ -1,8 +1,7 @@
 <template>
   <div class="accueil_container">
-    <div class="titre_du_groupe">{{ title }}</div>
     <div class="logo_container">
-      <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/logo_no_background.png">
+      <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/noir_bleu.png">
     </div>
     <div class="description_container">
       " Deux ados qui chantent avec une qui joue de la guitare et une qui chante plus aigu que l'autre et qui joue du
@@ -10,10 +9,10 @@
     </div>
     <div class="reseaux_container">
       <a class="reseau_link" href="https://www.facebook.com/limonadefroide/" target="_blank">
-        <img alt="Lien vers la page Facebook du groupe" class="facebook" src="@/assets/facebook_no_bg.png">
+        <img alt="Lien vers la page Facebook du groupe" class="facebook" src="@/assets/img/brand_logos/facebook_no_bg.png">
       </a>
       <a class="reseau_link" href="https://www.instagram.com/cold_lim/" target="_blank">
-        <img alt="Lien vers la page Instagram du groupe" class="instagram" src="@/assets/instagram_no_bg.png">
+        <img alt="Lien vers la page Instagram du groupe" class="instagram" src="@/assets/img/brand_logos/instagram_no_bg.png">
       </a>
     </div>
   </div>
@@ -23,12 +22,7 @@
 import {defineComponent} from 'vue';
 
 export default defineComponent({
-  name: 'Accueil',
-  data() {
-    return {
-      title: "Cold Lemonade"
-    }
-  }
+  name: 'Accueil'
 });
 </script>
 
@@ -36,17 +30,14 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 .accueil_container {
-  background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.18169-9/16265370_370152953350920_8291826055577056169_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=9267fe&_nc_ohc=b8C7I2CC3vAAX9LB1yo&_nc_ht=scontent-frt3-1.xx&oh=ddacca9d3bf841710ed115b60eab159d&oe=6179EF5E');
+  background-image: url('~@/assets/img/photos/scene_tramplin.jpg');
   height: 100%;
-  background-position: 40%;
-
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: 600px) {
-    background-image: url('~@/assets/scene_tramplin.jpg');
-    background-position: center;
+    background-image: url('~@/assets/img/photos/scene_tramplin.jpg');
   }
 }
 
@@ -54,20 +45,21 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 6%;
-  margin-top: -4%;
+  height: 10%;
+  padding-top: 2%;
 
   @media (min-width: 600px) {
-    height: 8%;
+    height: 15%;
+  }
+
+  .logo {
+    height: 100%;
   }
 }
 
-.logo {
-  height: 100%;
-}
 
 .titre_du_groupe {
-  color: #edd966;
+  color: $cl_yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +74,7 @@ export default defineComponent({
 }
 
 .description_container {
-  background-color: #182e85;
+  background-color: $cl_dark_green;
   margin-top: 100%;
   color: white;
   display: flex;
@@ -105,7 +97,7 @@ export default defineComponent({
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #edd966;
+  background-color: $cl_yellow;
   height: 25%;
 
   @media(min-width: 600px) {
