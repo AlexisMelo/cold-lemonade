@@ -9,5 +9,6 @@ body, html, #app {
   height: 100%;
   margin: 0;
   font-family: 'Merriweather', serif;
+  background-color: white;
 }
 </style>
