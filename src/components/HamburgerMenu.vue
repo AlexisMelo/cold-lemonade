@@ -1,16 +1,16 @@
 <template>
   <div class="menuMain">
-    <router-link to="/" class="menu-container-trigger"><img src="@/assets/img/illustrations/fleur.png"></router-link>
+    <router-link class="menu-container-trigger" to="/"><img src="@/assets/img/illustrations/fleur.png"></router-link>
     <div class="hidden_menu">
-      <router-link to="/qui-sommes-nous" class="image-menu-item-container appear-animation-1 disappear-animation-1"><img
+      <router-link class="image-menu-item-container appear-animation-1" to="/qui-sommes-nous"><img
           src="@/assets/img/illustrations/glacon.png">
         <div class="linkTitle">Qui sommes nous ?</div>
       </router-link>
-      <router-link to="/nos-chansons" class="image-menu-item-container appear-animation-2 disappear-animation-2"><img
+      <router-link class="image-menu-item-container appear-animation-2" to="/nos-chansons"><img
           src="@/assets/img/illustrations/citron.png">
         <div class="linkTitle">Nos chansons</div>
       </router-link>
-      <router-link to="/contact" class="image-menu-item-container appear-animation-3 disappear-animation-3"><img
+      <router-link class="image-menu-item-container appear-animation-3" to="/contact"><img
           src="@/assets/img/illustrations/quartier_citron.png">
         <div class="linkTitle">Contact</div>
       </router-link>
@@ -32,6 +32,11 @@ export default defineComponent({
 $animation-type-appear: ease-out;
 $animation-type-disappear: ease-in;
 
+$menu-size: 50px;
+$menu-size-sm: 50px;
+$menu-size-md: 75px;
+$menu-size-l: 100px;
+
 .menuMain {
   display: flex;
   justify-content: center;
@@ -47,18 +52,37 @@ $animation-type-disappear: ease-in;
 
   .menu-container {
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: $menu-size-sm;
+    height: $menu-size-sm;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
     position: relative;
     text-decoration: none;
 
     img {
-      width: 100px;
+      width: $menu-size-sm;
     }
+
+    @media (min-width: $breakpoint-sm) {
+      width: $menu-size-md;
+      height: $menu-size-md;
+
+      img {
+        width: $menu-size-md;
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      width: $menu-size-l;
+      height: $menu-size-l;
+
+      img {
+        width: $menu-size-l;
+      }
+    }
+
+
   }
 
   .menu-container-trigger {
@@ -84,18 +108,7 @@ $animation-type-disappear: ease-in;
     background-color: $color;
     position: relative;
     left: -200px;
-
-    &.disappear-animation-1 {
-      transition: left 0.7s $animation-type-disappear;
-    }
-
-    &.disappear-animation-2 {
-      transition: left 0.5s $animation-type-disappear;
-    }
-
-    &.disappear-animation-3 {
-      transition: left 0.3s $animation-type-disappear;
-    }
+    border-radius: 5px;
 
     &:hover {
       box-shadow: 0 0 15px $color;
@@ -121,9 +134,18 @@ $animation-type-disappear: ease-in;
 
   .hidden_menu {
     position: absolute;
-    margin-top: 100px;
+    margin-top: $menu-size-sm;
     top: 0;
     left: -130px;
+    transition: left 0.2s $animation-type-appear;
+
+    @media (min-width: $breakpoint-sm) {
+      margin-top: $menu-size-md;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: $menu-size-l;
+    }
   }
 }
 

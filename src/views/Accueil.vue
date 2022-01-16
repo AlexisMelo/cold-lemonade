@@ -28,13 +28,17 @@ export default defineComponent({
 }
 
 .logo_container {
-  padding-top: 1%;
+  padding-top: 5%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 10%;
+  justify-content: flex-end;
+  padding-right: 5%;
+  align-items: center;
+  height: 12%;
 
   @media (min-width: 600px) {
+    justify-content: center;
+    padding-top: 1%;
+    padding-right: 0;
     height: 15%;
   }
 

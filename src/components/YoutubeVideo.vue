@@ -1,7 +1,7 @@
 <template>
   <div class="youtubeVideoContainer">
-    <iframe :height="height"
-            :src="link" :width="width" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    <iframe class="youtubeVideo"
+            :src="link" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             frameborder="0"
             title="Vidéo youtube des Cold Lemonade au tremplin phénix normandie 2021">
@@ -18,19 +18,41 @@ export default defineComponent({
   data() {
     return {
       link: "https://www.youtube.com/embed/0Om1RtvtzyE",
-      width: 560,
-      height: 315
+
     }
   }
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .youtubeVideoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
+  margin-bottom: 35%;
+  margin-top: 35%;
+
+  @media (min-width: 600px) {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  @media (min-width: 800px) {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+}
+
+.youtubeVideo {
+  border-radius: 10px;
+  background-color: red;
+  width: 470px;
+  height: 264px;
+
+  @media (min-width: 800px) {
+    width: 672px;
+    height: 378px;
+  }
+
 }
 </style>
