@@ -9,4 +9,11 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 library.add(faPhone)
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(store).use(router).mount('#app')
+const app = createApp(App)
+
+app.component("font-awesome-icon", FontAwesomeIcon)
+
+app.use(store)
+app.use(router)
+
+app.mount('#app')

@@ -1,28 +1,30 @@
 <template>
   <div class="reseaux_container">
-    <a class="reseau_link" href="https://www.facebook.com/limonadefroide/" target="_blank">
+    <a title="Facebook" class="reseau_link" href="https://www.facebook.com/limonadefroide/" target="_blank">
       <img alt="Lien vers la page Facebook du groupe" class="facebook"
-           src="@/assets/img/brand_logos/facebook_no_bg.png">
+           src="@/assets/img/brand_logos/facebook.png">
     </a>
-    <a class="reseau_link" href="https://www.instagram.com/cold_lim/" target="_blank">
+    <a title="Instagram" class="reseau_link" href="https://www.instagram.com/cold_lim/" target="_blank">
       <img alt="Lien vers la page Instagram du groupe" class="instagram"
-           src="@/assets/img/brand_logos/instagram_no_bg.png">
+           src="@/assets/img/brand_logos/instagram.png">
     </a>
-    <a class="reseau_link" href="https://www.instagram.com/cold_lim/" target="_blank">
-      <img alt="Lien vers la page Instagram du groupe" class="instagram"
-           src="@/assets/img/brand_logos/instagram_no_bg.png">
+    <a title="Bandcamp" class="reseau_link" href="https://coldlemonade.bandcamp.com/" target="_blank">
+      <img alt="Lien vers la page Bandcamp du groupe" class="bandcamp"
+           src="@/assets/img/brand_logos/bandcamp.png">
     </a>
-    <a class="reseau_link" href="https://www.instagram.com/cold_lim/" target="_blank">
-      <img alt="Lien vers la page Instagram du groupe" class="instagram"
-           src="@/assets/img/brand_logos/instagram_no_bg.png">
+    <a title="Youtube" class="reseau_link" href="https://www.youtube.com/c/ColdLemonade" target="_blank">
+      <img alt="Lien vers la chaîne Youtube du groupe" class="youtube"
+           src="@/assets/img/brand_logos/youtube.png">
     </a>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from "vue";
+
+export default defineComponent({
   name: "SocialNetworks"
-}
+})
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +34,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 7%;
+  height: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -41,20 +43,23 @@ export default {
     padding-right: 20%;
   }
 
+  @media(min-width: 1200px) {
+    height: 12%;
+  }
+
   .reseau_link {
     height: 100%;
     text-align: center;
+    padding: 5px;
+    transition: padding 0.3s ease;
 
     img {
       height: 100%;
     }
 
-    .facebook:hover {
-      filter: drop-shadow(0 0 0.15rem blue);
-    }
-
-    .instagram:hover {
-      filter: drop-shadow(0 0 0.15rem purple);
+    &:hover {
+      position: relative;
+      padding: 1px;
     }
   }
 }

@@ -10,8 +10,10 @@
 
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {defineComponent} from "vue";
+
+export default defineComponent({
   name: "YoutubeVideo",
   data() {
     return {
@@ -20,7 +22,7 @@ export default {
       height: 315
     }
   }
-}
+})
 </script>
 
 <style scoped>
