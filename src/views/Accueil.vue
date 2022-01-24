@@ -1,11 +1,9 @@
 <template>
-  <div class="accueil_container">
     <div class="logo_container">
       <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/orange_bleu.png">
     </div>
     <YoutubeVideo />
     <SocialNetworks />
-  </div>
 </template>
 
 <script lang="ts">
@@ -22,9 +20,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-.accueil_container {
-  height: 100%;
-}
+
 
 .logo_container {
   padding-top: 5%;

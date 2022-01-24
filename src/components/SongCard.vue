@@ -1,38 +1,45 @@
 <template>
   <div class="card">
     <div class="imgBx">
-      <img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images">
+      <img :alt="`Image d'illustration pour la chanson ${title} des Cold Lemonade`" :src="img">
     </div>
     <div class="details">
-      <h2>SomeOne Famous<br><span>Director</span></h2>
+      <h2>{{ title }}<br><span>{{ subtitle }}</span></h2>
     </div>
   </div>
+
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
 
 export default defineComponent({
-  name: "SongCard"
+  name: "SongCard",
+  props: {
+    title: String,
+    subtitle: String,
+    img: String
+  }
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~@/assets/scss/main.scss";
 
-.card{
+.card {
   position: relative;
   width: 300px;
   height: 350px;
   background: $cl_light_blue;
   margin: 0 auto;
   border-radius: 4px;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  cursor: pointer;
 }
-.card::before,
-.card::after
-{
-  content:"";
+
+.card:before,
+.card:after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -41,34 +48,35 @@ export default defineComponent({
   border-radius: 4px;
   background: $cl_light_blue;
   transition: 0.5s;
-  z-index: 0;
+  z-index: -1;
 }
-.card:hover::before{
+
+.card:hover:before {
   transform: rotate(20deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
 }
-.card:hover::after{
+
+.card:hover:after {
   transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
 }
-.card .imgBx{
+
+.card .imgBx {
   position: absolute;
   top: 10px;
   left: 10px;
-  bottom: 10px;
+  bottom: 80px;
   right: 10px;
   background: #222;
   transition: 0.5s;
   z-index: 1;
 }
 
-.card:hover .imgBx
-{
-  bottom: 80px;
-  cursor: pointer;
+.card:hover .imgBx {
+  bottom: 10px;
 }
 
-.card .imgBx img{
+.card .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -77,30 +85,28 @@ export default defineComponent({
   object-fit: cover;
 }
 
-.card .details{
+.card .details {
   position: absolute;
   left: 10px;
   right: 10px;
   bottom: 10px;
   height: 60px;
   text-align: center;
-  z-index: 1;
-  color: black;
 }
 
-.card .details h2{
+.card .details h2 {
   margin: 0;
   padding: 0;
   font-weight: 600;
   font-size: 20px;
-  color: #777;
+  color: $cl_orange;
   text-transform: uppercase;
 }
 
-.card .details h2 span{
+.card .details h2 span {
   font-weight: 500;
   font-size: 16px;
-  color: #f38695;
+  color: royalblue;
   display: block;
   margin-top: 5px;
 }

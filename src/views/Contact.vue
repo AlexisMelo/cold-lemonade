@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1 class="pageHeading">Contact</h1>
+    bisou
   </div>
 </template>
 
