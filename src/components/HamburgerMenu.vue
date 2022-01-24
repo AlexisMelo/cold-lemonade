@@ -45,6 +45,7 @@ $menu-size-l: 100px;
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 100;
 
   .image-menu-item-container:first-of-type {
     margin-top: 10px;
