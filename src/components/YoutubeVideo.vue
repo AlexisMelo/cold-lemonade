@@ -31,15 +31,15 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 35%;
-  margin-top: 35%;
+  margin-bottom: 25%;
+  margin-top: 25%;
 
-  @media (min-width: 600px) {
+  @media (min-width: $breakpoint-sm) {
     margin-top: 20%;
     margin-bottom: 20%;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: $breakpoint-md) {
     margin-bottom: 5%;
     margin-top: 5%;
   }
