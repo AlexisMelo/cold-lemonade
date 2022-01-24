@@ -5,7 +5,6 @@
     </div>
     <YoutubeVideo />
     <SocialNetworks />
-
   </div>
 </template>
 

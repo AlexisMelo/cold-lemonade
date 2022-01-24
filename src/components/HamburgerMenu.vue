@@ -1,6 +1,6 @@
 <template>
   <div class="menuMain">
-    <router-link class="menu-container-trigger" to="/"><img src="@/assets/img/illustrations/fleur.png"></router-link>
+    <router-link class="menu-container-trigger" to="/"><img alt="Image menu déroulant" src="@/assets/img/illustrations/fleur.png"></router-link>
     <div class="hidden_menu">
       <router-link class="image-menu-item-container appear-animation-1" to="/qui-sommes-nous"><img
           src="@/assets/img/illustrations/glacon.png">
@@ -29,7 +29,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "~@/assets/scss/main.scss";
 
-$animation-type-appear: ease-out;
+$animation-type-appear: ease-in;
 $animation-type-disappear: ease-in;
 
 $menu-size: 50px;
@@ -52,11 +52,10 @@ $menu-size-l: 100px;
 
   .menu-container {
     cursor: pointer;
-    width: $menu-size-sm;
     height: $menu-size-sm;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     text-decoration: none;
 
@@ -65,7 +64,6 @@ $menu-size-l: 100px;
     }
 
     @media (min-width: $breakpoint-sm) {
-      width: $menu-size-md;
       height: $menu-size-md;
 
       img {
@@ -74,7 +72,6 @@ $menu-size-l: 100px;
     }
 
     @media (min-width: $breakpoint-md) {
-      width: $menu-size-l;
       height: $menu-size-l;
 
       img {
@@ -93,42 +90,42 @@ $menu-size-l: 100px;
     z-index: 1;
     background-color: $color;
     border-radius: 50%;
-    box-shadow: 0 0 10px $color;
+    box-shadow: 0 0 15px 3px $color;
+    transition: box-shadow 0.3s ease;
 
     &:hover {
-      box-shadow: 0 0 20px $color;
+      box-shadow: 0 0 15px 8px $color;
     }
   }
 
   .image-menu-item-container {
     @extend .menu-container;
     $color: $cl_light_green;
-
     margin-bottom: 10px;
     background-color: $color;
     position: relative;
     left: -200px;
     border-radius: 5px;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    box-shadow: 0 0 0 0 $color;
+    transition: box-shadow 0.3s ease;
 
     &:hover {
-      box-shadow: 0 0 15px $color;
-      width: auto;
-
-      .linkTitle {
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
+      box-shadow: 0 0 20px $color;
+      filter: brightness(0.8);
     }
 
     .linkTitle {
       height: 100%;
-      color: $cl_dark_green;
-      background-color: $color;
-      display: none;
+      color: black;
+      display: flex;
       transition: opacity 0.5s;
       white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      align-items: center;
     }
   }
 
@@ -161,15 +158,15 @@ $menu-size-l: 100px;
   }
 
   .appear-animation-1 {
-    transition: left 0.2s $animation-type-appear;
+    transition: left 0.3s $animation-type-appear;
   }
 
   .appear-animation-2 {
-    transition: left 0.4s $animation-type-appear;
+    transition: left 0.5s $animation-type-appear;
   }
 
   .appear-animation-3 {
-    transition: left 0.6s $animation-type-appear;
+    transition: left 0.7s $animation-type-appear;
   }
 }
 </style>
