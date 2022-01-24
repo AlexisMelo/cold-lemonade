@@ -25,6 +25,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import "~@/assets/scss/main.scss";
+
 .youtubeVideoContainer {
   display: flex;
   align-items: center;
@@ -46,10 +48,15 @@ export default defineComponent({
 .youtubeVideo {
   border-radius: 10px;
   background-color: red;
-  width: 470px;
-  height: 264px;
+  width: 329px;
+  height: 184px;
 
-  @media (min-width: 800px) {
+  @media (min-width: $breakpoint-sm) {
+    width: 470px;
+    height: 264px;
+  }
+
+  @media (min-width: $breakpoint-md) {
     width: 672px;
     height: 378px;
   }

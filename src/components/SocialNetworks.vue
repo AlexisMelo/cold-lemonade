@@ -28,22 +28,24 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "~@/assets/scss/main.scss";
 
 .reseaux_container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 10%;
+  height: 12%;
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @media(min-width: 600px) {
+  @media(min-width: $breakpoint-sm) {
     padding-left: 20%;
     padding-right: 20%;
+    height: 10%;
   }
 
-  @media(min-width: 1200px) {
+  @media(min-width: $breakpoint-l) {
     height: 12%;
   }
 
