@@ -6,9 +6,7 @@
   <div class="box">
     <SongCard v-for="(song, index) in songsFiltered"
               :key="index"
-              :img="song.img"
-              :subtitle="song.subtitle"
-              :title="song.title"
+              :song="song"
     />
   </div>
 </template>
@@ -16,12 +14,8 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import SongCard from "@/components/SongCard.vue";
-
-interface Song {
-  title: string,
-  subtitle: string,
-  img: string
-}
+import SongsList from "@/assets/ts/SongsList";
+import Song from "@/assets/ts/Song";
 
 export default defineComponent({
   name: "NosChansons",
@@ -29,48 +23,7 @@ export default defineComponent({
   data() {
     return {
       songTitleHint: "",
-      songs: [
-        {
-          title: "I hope",
-          subtitle: "2018",
-          img: require("@/assets/img/illustrations_chansons/i_hope.jpg")
-        },
-        {
-          title: "Saurochoria",
-          subtitle: "2018",
-          img: require("@/assets/img/illustrations_chansons/saurochoria.jpg")
-        },
-        {
-          title: "Just the way you are",
-          subtitle: "Cover - 2021",
-          img: require("@/assets/img/illustrations/fleur.png")
-        },
-        {
-          title: "Sunflower",
-          subtitle: "Cover - 2019",
-          img: require("@/assets/img/illustrations/quartier_citron.png")
-        },
-        {
-          title: "Help",
-          subtitle: "Cover - 2019",
-          img: "https://1.bp.blogspot.com/-dsoQZXMnikY/VzaDXzRPilI/AAAAAAAAR40/cgSudK0IRo81zXNLHvU0aB2ngegrFoVhwCLcB/s1600/DSCF0948.JPG"
-        },
-        {
-          title: "Someday",
-          subtitle: "Cover - 2019",
-          img: require("@/assets/img/illustrations/citron.png")
-        },
-        {
-          title: "My smile is extinct",
-          subtitle: "Cover - 2019",
-          img: require("@/assets/img/illustrations/quartier_citron.png")
-        },
-        {
-          title: "Ambitious Song",
-          subtitle: "2018",
-          img: require("@/assets/img/illustrations/glacon.png")
-        }
-      ] as Song[]
+      songs: SongsList
     }
   },
   computed: {
@@ -81,15 +34,16 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 @import "~@/assets/scss/headings.scss";
+@import "~@/assets/scss/main.scss";
 
 .box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: 30px;
   column-gap: 15px;
-  margin-top: 50px;
+  padding: 50px 0 ;
 }
 
 .containerSearchBar {
@@ -101,7 +55,16 @@ export default defineComponent({
 .searchSongInput {
   font-size: 1.2rem;
   text-align: center;
-  width: 30%;
+  width: 90%;
+
+  @media (min-width: $breakpoint-md) {
+    width: 70%;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    width: 50%;
+  }
+
   margin-right: 15px;
 }
 </style>

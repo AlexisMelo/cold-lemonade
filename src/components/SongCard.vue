@@ -1,24 +1,27 @@
 <template>
   <div class="card">
     <div class="imgBx">
-      <img :alt="`Image d'illustration pour la chanson ${title} des Cold Lemonade`" :src="img">
+      <img :alt="`Image d'illustration pour la chanson ${song.title} des Cold Lemonade`" :src="song.img">
     </div>
     <div class="details">
-      <h2>{{ title }}<br><span>{{ subtitle }}</span></h2>
+      <h2>{{ song.title }}</h2>
+      <div>{{ song.year }}</div>
     </div>
   </div>
 
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, PropType} from "vue";
+import Song from "@/assets/ts/Song";
 
 export default defineComponent({
   name: "SongCard",
   props: {
-    title: String,
-    subtitle: String,
-    img: String
+    song: {
+      type: Object as PropType<Song>,
+      required: true
+    }
   }
 })
 </script>
@@ -92,22 +95,26 @@ export default defineComponent({
   bottom: 10px;
   height: 60px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .card .details h2 {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 100%;
   color: $cl_orange;
   text-transform: uppercase;
 }
 
-.card .details h2 span {
+.card .details div {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 100%;
   color: royalblue;
   display: block;
-  margin-top: 5px;
 }
 </style>
