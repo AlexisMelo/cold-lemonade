@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, PropType} from "vue";
+import {defineComponent, PropType, ref} from "vue";
 import Song from "@/assets/ts/Song";
 
 export default defineComponent({
@@ -22,18 +22,28 @@ export default defineComponent({
       type: Object as PropType<Song>,
       required: true
     }
+  },
+  setup(props) {
+    const theme = ref({
+      color: props.song.color
+    })
+
+    return {
+      theme
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 @import "~@/assets/scss/main.scss";
+$card_color: v-bind('theme.color');
 
 .card {
   position: relative;
   width: 300px;
   height: 350px;
-  background: $cl_light_blue;
+  background: $card_color;
   margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
@@ -49,7 +59,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  background: $cl_light_blue;
+  background: $card_color;
   transition: 0.5s;
   z-index: -1;
 }
@@ -93,13 +103,16 @@ export default defineComponent({
   left: 10px;
   right: 10px;
   bottom: 10px;
-  height: 60px;
+  height: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
+  background-color: white;
 }
 
 .card .details h2 {

@@ -6,7 +6,7 @@ const SongsList = [{
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
     youtubeLink: "https://youtu.be/0Om1RtvtzyE?t=1",
     isCover: false,
-    color: "#ba2f66",
+    color: "#952348",
     clipAvailable: false
 },{
     title: "Les larmes",
@@ -14,7 +14,7 @@ const SongsList = [{
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
     youtubeLink: "https://youtu.be/0Om1RtvtzyE?t=180",
     isCover: false,
-    color: "#ba2f66",
+    color: "#952348",
     clipAvailable: false
 },{
     title: "Sommeil d'Or",
@@ -22,7 +22,7 @@ const SongsList = [{
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
     youtubeLink: "https://youtu.be/0Om1RtvtzyE?t=324",
     isCover: false,
-    color: "#ba2f66",
+    color: "#952348",
     clipAvailable: false
 },{
     title: "Lighthouse",
@@ -30,7 +30,7 @@ const SongsList = [{
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
     youtubeLink: "https://youtu.be/0Om1RtvtzyE?t=592",
     isCover: false,
-    color: "#ba2f66",
+    color: "#952348",
     clipAvailable: false
 },{
     title: "Just the way you are",
@@ -41,7 +41,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "Bruno Mars",
     originalLink: "https://www.youtube.com/watch?v=LjhCEhWiKXk",
-    color: "white",
+    color: "#aadff6",
     clipAvailable: false
 }, {
     title: "Sunflower - Sierra Burgress is a Loser",
@@ -59,7 +59,7 @@ const SongsList = [{
     img: require("@/assets/img/illustrations_chansons/i_hope.jpg"),
     bandcampLink: "https://coldlemonade.bandcamp.com/track/i-hope",
     isCover: false,
-    color: "white",
+    color: "#bcb3ae",
     clipAvailable: false
 }, {
     title: "Melocactus Tropidurus",
@@ -85,7 +85,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "The Beatles",
     originalLink: "https://www.youtube.com/watch?v=2Q_ZzBGPdqE",
-    color: "#cbc2e9",
+    color: "#f1d23a",
     clipAvailable: false
 }, {
     title: "Someday",
@@ -95,7 +95,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "The Strokes",
     originalLink: "https://www.youtube.com/watch?v=knU9gRUWCno",
-    color: "black",
+    color: "#f1d23a",
     clipAvailable: false
 }, {
     title: "My smile is extinct",
@@ -105,7 +105,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "Kane Strang",
     originalLink: "https://www.youtube.com/watch?v=pBEv_9t61Xk",
-    color: "#ffde7a",
+    color: "#a5eb67",
     clipAvailable: false
 }, {
     title: "Stephanie Says",
@@ -115,7 +115,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "The Velvet Underground",
     originalLink: "https://www.youtube.com/watch?v=weRw8vTKzAw",
-    color: "#ffb8cd",
+    color: "#a5eb67",
     clipAvailable: false
 }, {
     title: "Ambitious Song",
@@ -124,7 +124,7 @@ const SongsList = [{
     youtubeLink: "https://www.youtube.com/watch?v=QTbXTB4Ylu0",
     bandcampLink: "https://coldlemonade.bandcamp.com/track/ambitious-song",
     isCover: false,
-    color: "#c23235",
+    color: "#7c2833",
     clipAvailable: true
 }, {
     title: "Video games",
@@ -144,7 +144,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "Moriarty",
     originalLink: "https://www.youtube.com/watch?v=lnbl94GZ6TM",
-    color: "#62ad1f",
+    color: "#1f420e",
     clipAvailable: true
 }, {
     title: "It Girl",
@@ -154,7 +154,7 @@ const SongsList = [{
     isCover: true,
     originalArtist: "The Brian Jonestown Massacre",
     originalLink: "https://www.youtube.com/watch?v=4Wu0463vdF0",
-    color: "#81553f",
+    color: "#604132",
     clipAvailable: true
 }, {
     title: "Riptide",
