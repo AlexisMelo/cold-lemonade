@@ -1,9 +1,9 @@
 <template>
-    <div class="logo_container">
-      <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/orange_bleu.png">
-    </div>
-    <YoutubeVideo />
-    <SocialNetworks />
+  <div class="logo_container">
+    <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/orange_bleu.png">
+  </div>
+  <YoutubeVideo/>
+  <SocialNetworks/>
 </template>
 
 <script lang="ts">
@@ -19,8 +19,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
-
+@import "~@/assets/scss/main.scss";
 
 .logo_container {
   padding-top: 5%;
@@ -28,17 +27,19 @@ export default defineComponent({
   justify-content: flex-end;
   padding-right: 5%;
   align-items: center;
-  height: 12%;
 
   @media (min-width: 600px) {
     justify-content: center;
     padding-top: 1%;
     padding-right: 0;
-    height: 15%;
   }
 
   .logo {
-    height: 100%;
+    height: 50px;
+
+    @media (min-width: $breakpoint-sm) {
+      height: 100px;
+    }
   }
 }
 

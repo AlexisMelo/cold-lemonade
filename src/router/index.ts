@@ -2,7 +2,9 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Accueil from '../views/Accueil.vue'
 import QuiSommesNous from "@/views/QuiSommesNous.vue";
 import Contact from "@/views/Contact.vue";
-import NosChansons from "@/views/NosChansons.vue";
+import SongsList from "@/views/SongsList.vue";
+import SongDetails from "@/views/SongDetails.vue";
+import PageNotFound from "@/views/PageNotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,7 +25,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/nos-chansons',
     name: 'NosChansons',
-    component: NosChansons
+    component: SongsList
+  },
+  {
+    path: '/chanson/:id',
+    name: 'Chanson',
+    component: SongDetails
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: PageNotFound
   }
 ]
 

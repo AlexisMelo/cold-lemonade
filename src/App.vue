@@ -17,8 +17,9 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import "~@/assets/scss/main.scss";
 
 body, html, #app {
   height: 100%;
@@ -35,8 +36,18 @@ main, body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  height: 100%;
+  min-height: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 90%;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 80%;
+  }
 }
 </style>

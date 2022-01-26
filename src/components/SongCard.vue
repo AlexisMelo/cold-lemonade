@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="goToDetails">
     <div class="imgBx">
       <img :alt="`Image d'illustration pour la chanson ${song.title} des Cold Lemonade`" :src="song.img">
     </div>
@@ -30,6 +30,11 @@ export default defineComponent({
 
     return {
       theme
+    }
+  },
+  methods: {
+    goToDetails() {
+      this.$router.push(`/chanson/${this.song.id}`)
     }
   }
 })
@@ -80,7 +85,7 @@ $card_color: v-bind('theme.color');
   left: 10px;
   bottom: 80px;
   right: 10px;
-  background: #222;
+  background: $card_color;
   transition: 0.5s;
   z-index: 1;
 }

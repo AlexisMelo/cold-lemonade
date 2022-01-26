@@ -35,33 +35,22 @@ export default defineComponent({
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 12%;
   padding-top: 20px;
   padding-bottom: 20px;
 
   @media(min-width: $breakpoint-sm) {
     padding-left: 20%;
     padding-right: 20%;
-    height: 10%;
   }
 
   @media(min-width: $breakpoint-l) {
-    height: 12%;
   }
 
   .reseau_link {
-    height: 100%;
     text-align: center;
-    padding: 5px;
-    transition: padding 0.3s ease;
 
     img {
-      height: 100%;
-    }
-
-    &:hover {
-      position: relative;
-      padding: 1px;
+      height: 50px;
     }
   }
 }
