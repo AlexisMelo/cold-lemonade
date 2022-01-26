@@ -1,9 +1,12 @@
 <template>
-  <div class="logo_container">
-    <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/orange_bleu.png">
+  <div>
+    <div class="logo_container">
+      <img alt="Logo du groupe Cold Lemonade" class="logo" src="@/assets/img/cold_lim_logos/orange_bleu.png">
+    </div>
+    <YoutubeVideo/>
+    <SocialNetworks/>
   </div>
-  <YoutubeVideo/>
-  <SocialNetworks/>
+
 </template>
 
 <script lang="ts">

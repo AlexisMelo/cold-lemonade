@@ -1,23 +1,25 @@
 <template>
-  <h1 class="pageHeading">Nos chansons</h1>
-  <div class="containerSearchBar">
-    <input class="searchSongInput" placeholder="Chercher une chanson..." type="text" v-model="songTitleHint"/>
-  </div>
-  <transition-group name="animated-list" tag="div" class="box">
+  <div>
+    <h1 class="pageHeading">Nos chansons</h1>
+    <div class="containerSearchBar">
+      <input class="searchSongInput" placeholder="Chercher une chanson..." type="text" v-model="songTitleHint"/>
+    </div>
+    <transition-group name="animated-list" tag="div" class="box">
       <SongCard v-for="song in songsFiltered"
                 :key="song.id"
                 :song="song"
                 class="animated-list-item"
       />
-  </transition-group>
-  <transition name="no-song-fade">
-    <div class="no-song-container" v-if="songsFiltered.length === 0">
-      <p>
-        Aucune chanson ne correspond à la recherche ...
-      </p>
-      <img src="@/assets/img/illustrations/sad_thumbleweed.png" alt="Aucune image trouvée">
-    </div>
-  </transition>
+    </transition-group>
+    <transition name="no-song-fade">
+      <div class="no-song-container" v-if="songsFiltered.length === 0">
+        <p>
+          Aucune chanson ne correspond à la recherche ...
+        </p>
+        <img src="@/assets/img/illustrations/sad_thumbleweed.png" alt="Aucune image trouvée">
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script lang="ts">
