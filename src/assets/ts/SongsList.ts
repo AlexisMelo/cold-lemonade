@@ -1,6 +1,7 @@
 import Song from "@/assets/ts/Song";
 
 const SongsList = [{
+    id: 18,
     title: "La clairière",
     year: 2021,
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
@@ -9,6 +10,7 @@ const SongsList = [{
     color: "#952348",
     clipAvailable: false
 },{
+    id: 17,
     title: "Les larmes",
     year: 2021,
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
@@ -17,6 +19,7 @@ const SongsList = [{
     color: "#952348",
     clipAvailable: false
 },{
+    id: 16,
     title: "Sommeil d'Or",
     year: 2021,
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
@@ -25,6 +28,7 @@ const SongsList = [{
     color: "#952348",
     clipAvailable: false
 },{
+    id: 15,
     title: "Lighthouse",
     year: 2021,
     img: require("@/assets/img/illustrations_chansons/tremplin.png"),
@@ -33,6 +37,7 @@ const SongsList = [{
     color: "#952348",
     clipAvailable: false
 },{
+    id: 14,
     title: "Just the way you are",
     year: 2021,
     img: require("@/assets/img/illustrations/fleur.png"),
@@ -44,6 +49,7 @@ const SongsList = [{
     color: "#aadff6",
     clipAvailable: false
 }, {
+    id: 13,
     title: "Sunflower - Sierra Burgress is a Loser",
     year: 2019,
     img: require("@/assets/img/illustrations_chansons/sunflower.png"),
@@ -54,6 +60,7 @@ const SongsList = [{
     color: "#fff984",
     clipAvailable: false
 }, {
+    id: 12,
     title: "I hope",
     year: 2018,
     img: require("@/assets/img/illustrations_chansons/i_hope.jpg"),
@@ -62,6 +69,7 @@ const SongsList = [{
     color: "#bcb3ae",
     clipAvailable: false
 }, {
+    id: 11,
     title: "Melocactus Tropidurus",
     year: 2018,
     img: require("@/assets/img/illustrations_chansons/saurochoria.jpg"),
@@ -70,6 +78,7 @@ const SongsList = [{
     color: "#ace0f8",
     clipAvailable: false
 }, {
+    id: 10,
     title: "Partner In Life (And My One True Love)",
     year: 2018,
     img: require("@/assets/img/illustrations_chansons/saurochoria.jpg"),
@@ -78,6 +87,7 @@ const SongsList = [{
     color: "#ace0f8",
     clipAvailable: false
 }, {
+    id: 9,
     title: "Help",
     year: 2018,
     img: require("@/assets/img/illustrations/citron.png"),
@@ -88,6 +98,7 @@ const SongsList = [{
     color: "#f1d23a",
     clipAvailable: false
 }, {
+    id: 8,
     title: "Someday",
     year: 2018,
     img: require("@/assets/img/illustrations/citron.png"),
@@ -98,6 +109,7 @@ const SongsList = [{
     color: "#f1d23a",
     clipAvailable: false
 }, {
+    id: 7,
     title: "My smile is extinct",
     year: 2018,
     img: require("@/assets/img/illustrations/quartier_citron.png"),
@@ -108,6 +120,7 @@ const SongsList = [{
     color: "#a5eb67",
     clipAvailable: false
 }, {
+    id: 6,
     title: "Stephanie Says",
     year: 2018,
     img: require("@/assets/img/illustrations/quartier_citron.png"),
@@ -118,6 +131,7 @@ const SongsList = [{
     color: "#a5eb67",
     clipAvailable: false
 }, {
+    id: 5,
     title: "Ambitious Song",
     year: 2017,
     img: require("@/assets/img/illustrations_chansons/ambitious_song.png"),
@@ -127,6 +141,7 @@ const SongsList = [{
     color: "#7c2833",
     clipAvailable: true
 }, {
+    id: 4,
     title: "Video games",
     year: 2017,
     img: require("@/assets/img/illustrations/glacon.png"),
@@ -137,6 +152,7 @@ const SongsList = [{
     color: "#ace0f8",
     clipAvailable: false
 }, {
+    id: 3,
     title: "Jimmy",
     year: 2016,
     img: require("@/assets/img/illustrations_chansons/jimmy.png"),
@@ -147,6 +163,7 @@ const SongsList = [{
     color: "#1f420e",
     clipAvailable: true
 }, {
+    id: 2,
     title: "It Girl",
     year: 2016,
     img: require("@/assets/img/illustrations_chansons/it_girl.png"),
@@ -157,6 +174,7 @@ const SongsList = [{
     color: "#604132",
     clipAvailable: true
 }, {
+    id: 1,
     title: "Riptide",
     year: 2016,
     img: require("@/assets/img/illustrations/citron.png"),
